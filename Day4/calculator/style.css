@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(35, 35, 35) !important;
+}
+
+.calculator {
+  /* width: 550px !important; */
+  background-color: white;
+  background-image: linear-gradient(rgb(72, 160, 222), rgb(88, 197, 173));
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  justify-content: center;
+}
+
+.calsigns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.grid-container {
+  margin: 10px;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.exit {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  color: rgb(148, 225, 245) !important;
+}
+
+p {
+  color: red;
+}

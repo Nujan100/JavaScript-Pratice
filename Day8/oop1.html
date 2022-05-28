@@ -1,0 +1,22 @@
+<script src="oop1.js">
+
+</script>
+
+<script>
+    p1 = new Person(1, "Doe", "KTM")
+    document.write(p1.pid + "<br/>")
+    document.write(p1.name + "<br/>")
+    document.write(p1.address + "<br/>")
+    p2= new Person()
+    document.write(p2.pid)
+    c1 = new Calculator(10,4);
+    c2 = new CalculatorV2(16,2);
+    
+    c1.calculate('/');
+    c2.calculate('+');
+    document.write(c2.num3+ "<br/>");
+    document.write(c2.str1+ "<br/>");
+    document.write(`${c1.num1} + ${c1.num2} = ${c1.num3}`)
+    console.log(c2.string1())
+    document.write(c2.toString());
+</script>

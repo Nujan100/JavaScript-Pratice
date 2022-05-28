@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+    <div class="calculator container flex-column">
+        <div class="firstnum container">
+            <div class="row">
+                <div class="col-sm">
+                    <h3>First Number</h3>
+                </div>
+                <div class="col-sm">
+                    <input type="number" name="FirstNumber" id="FirstNumber" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="secondnum container">
+            <div class="row">
+                <div class="col-sm">
+                    <h3>Second Number</h3>
+                </div>
+                <div class="col-sm">
+                    <input type="number" name="SecondNumber" id="SecondNumber" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h3>Output</h3>
+                </div>
+                <div>
+                    <div class="col-sm">
+                        <input type="number" id="Sum" class="form-control" value="Sum"  >
+                        <label for="Sum"> </label>
+                    </div>
+                    <h3 class="col-sm" id="sum"></h3>
+                    <h3 class="col-sm" id="subtraction"></h3>
+                    <h3 class="col-sm" id="multiply"></h3>
+                    <h3 class="col-sm" id="divide"></h3>
+                    <h3 class="col-sm" id="power"></h3>
+                    <h3 class="col-sm" id="modulus"></h3>
+                </div>
+                <!-- <div class="col-sm">
+                    <input type="text" name="sum" id="sums" class="form-control" placeholder="0">
+                </div> -->
+            </div>
+        </div>
+        <div class="grid-container calsigns">
+            <button onclick="addition()" class="btn btn-primary grid-items" id="add">+</button>
+            <button onclick="subtraction()" class="btn btn-primary grid-items" id="subtract">-</button>
+            <button onclick="multiply()" class="btn btn-primary grid-items" id="multipl">*</button>
+            <button onclick="divide()" class="btn btn-primary grid-items" id="divid">/</button>
+            <button onclick="power()" class="btn btn-primary grid-items" id="powr">^</button>
+            <button onclick="modulus()" class="btn btn-primary grid-items" id="mo">%</button>
+            <button onclick="" class="btn btn-danger grid-items" id="clear">C</button>
+            <button onclick="" class="btn btn-dark grid-items" id="clear">Exit</button>
+        </div>
+        <div class="container exit">
+        </div>
+    </div>
+    </div>
+    <script src="functions.js">
+    </script>
+    </form>
+</body>
+
+</html>
