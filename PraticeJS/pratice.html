@@ -1,22 +1,23 @@
+<p>
+    Calculator
+</p>
+<h2> First Number: <input type="number" id="FirstNum"></h2>
+<h2> Second Number: <input type="number" id="SecondNum"></h2>
+<h2> Result: <input type="text" id="result"></h2>
+<p> <input type="button" value="ADD" onclick="Calc()"></p>
 <script src="pratice.js">
 </script>
 
 <script>
-    
-    // Constructor Function
-    
+    var Calc = function(){
+        calc1 = new calculator();
+        calc1.setfirstNum(parseInt(document.getElementById('FirstNum').value));
+        calc1.setsecondNum(parseInt(document.getElementById('SecondNum').value));
+        calc2 = new calc(calc1);
+        calc2.sum();[]
+        calc1 = calc2.getmycalculator();
+        var result=calc1.getresultNum();
+        //publish result from object of calculator class
+    document.getElementById("result").value=result;
+    }
 </script>
-
-<!DOCTYPE html>
-<html lang="en">
-    <link rel="stylesheet" href="style.css">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>

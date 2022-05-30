@@ -1,0 +1,101 @@
+<script>
+    // here person is object. property can be  add updated remove delete 
+    /*
+    const person = {
+        id:1,
+        name:'THE GREAT GATSBY',
+        address:'BKT'
+    }
+
+    //accessing an object 
+    console.log(person);
+
+    //accessing property (kasko value?  object ko value)
+    console.log(person.id);  //dot notation
+    console.log(person['id']);  //bracket notation 
+
+
+    //adding property 
+    person.email = "info@gmail.com";
+    person.mobile = "9874398029";
+    console.log(person);
+
+    //update property value 
+    person.email = "system@gmail.com";
+    console.log(person);
+     //delete property 
+     
+     delete person.mobile;
+     console.log(person);
+         
+*/
+    //object method and this keyword 
+    /*
+    const person = {
+        id: 6,
+        name: 'THE GREAT CHAINS',
+        address: 'SGM',
+        age: 22,
+        //get birth year is also a property which shows the anomyous function 
+        getBirthYear: function () {
+            console.log("Birth year :" + (2022 - this.age));
+        }
+    }
+    person.getBirthYear();
+*/
+
+    // /*
+    const person = {
+        id : 6,
+        name:'THE GREAT CHAINS',
+        address:'SGM',
+        age:25,
+    };
+    console.log("example-1");
+    for(let id in person){
+        console.log(id, person[id]);
+    }
+    
+    console.log("example-2");
+    console.log(Object.keys(person));
+    console.log(Object.values(person));
+    //here var 1 is array
+    var1 = Object.keys(person);
+    console.log(typeof var1);
+    console.log(var1);
+    //we received array values
+    for(let value in var1)
+    {
+        console.log(value);
+    }
+    //traversing object
+    //! dont know how to use this keyword
+    console.log("example-3");
+    for(let key of Object.keys(person)){
+        console.log(key);
+    }
+    console.log("example-4");
+    for(let value  of Object.values(person)){
+        console.log(value);
+    }
+    
+    console.log("example-5");
+    for(let key of Object.keys(person)){
+        console.log(key,person[key]);
+    }
+    // */
+
+// const person = {
+//     id : 6,
+//     name:'THE GREAT CHAINS',
+//         age:25,
+//         address: {
+//             tole:'ason',
+//             ward:2,
+//             mpc:'BKT',
+//             district:'BKT'
+//         },
+// };
+
+// console.log(person.address.district);
+</script>

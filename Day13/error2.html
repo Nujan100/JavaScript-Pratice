@@ -1,0 +1,55 @@
+<p>First Number:<input id="first" type="text"></p>
+<p>Second Number:<input id="second" type="text"></p>
+<p><input type="button" value="Add" onclick="first()"></p>
+<p>Result: <input type="text" id="result"></p>
+
+<script src="calculator.js"></script>
+<script src="calc.js"></script>
+<script>
+function first() {
+  let x = document.getElementById("first").value;
+  let y = document.getElementById("second").value;
+  try { 
+    if(x == "" || y=="")  
+        throw "empty";
+    else if(isNaN(x) ||isNaN(y)) 
+        throw "not a number";
+    else if((x < 1 || x>10) && (y < 11 || y>20)){
+        var error= "Input first number between 1 to 10 !! \nInput second number between 11 to 20 !!";
+        throw error;
+    }
+    else if(x < 1 || x>10)
+        throw "Input first number between 1 to 10 !!";
+    else if(y < 11 || y>20)
+        throw "Input second number between 11 to 20 !!";
+    else{
+        var Calc = function(){
+        //create and initialize an object of calculator
+        c1= new calculator();
+        c1.setFirstNum(parseInt(document.getElementById("first").value));
+        c1.setSecondNum(parseInt(document.getElementById("second").value));
+        
+        //create and initialize an object of calc by an object of calculator
+        c2 = new calc(c1);
+
+        //call sum method of calc object
+        c2.sum();
+        
+        //get an object calculator from object of an calc class
+        c1= c2.getMyCalculator();
+        var result=c1.getResult();
+         
+        //publish thirdNo. from object of calculaor class
+        document.getElementById("result").value= result;
+       }
+       Calc();
+    }
+    
+  }
+  catch(err) {
+    window.alert(err);
+  }
+}
+
+
+</script>
