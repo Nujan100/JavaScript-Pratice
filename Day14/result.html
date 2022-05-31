@@ -1,0 +1,67 @@
+<h2>MarkSheet</h2>
+<p>SID: <input type="text" id="txtSid"></p>
+<p>Subject 1: <input type="text" id="txtSub1"></p>
+<p>Subject 2: <input type="text" id="txtSub2"></p>
+<p>Subject 3: <input type="text" id="txtSub3"></p>
+<p><input type="button" value="PROCESS" name="btnProcess" onclick="processStudent1()"></p>
+<p>Total: <input type="text" id="txtTotal"></p>
+<p>Average: <input type="text" id="txtAverage"></p>
+<p>Result: <input type="text" id="txtResult"></p>
+<p> <input type="button" value="SAVE" name="btnSave" onclick="processStudent1()"></p> <!-- we call function to execute-->
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>SUB1</td>
+        <td>SUB2</td>
+        <td>SUB3</td>
+        <td>TOTAL</td>
+        <td>AVERAGE</td>
+        <td>RESULT</td>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <td>SUB1</td>
+        <td>SUB2</td>
+        <td>SUB3</td>
+        <td>TOTAL</td>
+        <td>AVERAGE</td>
+        <td>RESULT</td>
+    </tr>
+</table>
+<script src="result.js">
+   
+</script>
+<script>
+    //  function processStudent1(){
+    //     var sid=sub1=sub2=sub3=null;
+    //     sid= txtSid.value;
+    //     sub1=txtSub1.value;
+    //     sub2=txtSub2.value;
+    //     sub3=txtSub3.value;
+    //     var result= process1(sid,sub1,sub2,sub3);
+    //     txtTotal.value=result.total;
+    //     txtAverage.value=result.avg;
+    //     txtResult.value=result.result;
+
+    // }
+    // processStudent1();
+
+    function processStudent2(obj1){
+        var obj1={
+            sid:txtSid.value,
+            sub1:txtSub1.value,
+            sub2:txtSub2.value,
+            sub3:txtSub3.value,
+        };
+        var result= process2(obj1);
+
+        //! passing object 
+        // read all values 
+        // create onject 
+        // send object to process2 function 
+        // recive result and display
+        // add row on table each time it is saved
+    };
+    processStudent2();
+    
+</script>

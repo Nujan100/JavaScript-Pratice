@@ -85,6 +85,7 @@
     }
     */
 
+    //! nested json
 const person = {
     id : 6,
     name:'THE GREAT CHAINS',
@@ -92,11 +93,20 @@ const person = {
         address: {
             tole:'ason',
             ward:2,
-            mpc:'BKT',
+            city:'BKT',
             district:'BKT'
         },
 };
+
 console.log(person.address.district);
 var response = JSON.stringify(person);
 console.log(response);
+// to print all in single line
+var {id,name,age,address} = person;
+var {tole, city} =address;
+console.log(id, name, age, address);
+console.log(tole, city);
+// to print all in single line
+
+
 </script>
