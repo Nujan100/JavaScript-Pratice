@@ -26,5 +26,8 @@ var process2 = function (obj1) {
     obj1.add("average", avg);
     obj1.add("result", result);
     console.log(obj1);
+    obj1.total = total;
+    obj1.avg = avg;
+    obj1.result = result;
     return obj1;
 }

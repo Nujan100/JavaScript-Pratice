@@ -3,5 +3,28 @@
 </script>
 
 <script>
-
+    var arrays = ['Hello', 'how', 'are', 'you'];
+    // to add an element to the end of an array
+    arrays.push('?');
+    // to remove an element to the beginning of an array
+    arrays.shift();
+    // to replace the third value of an array
+    arrays[3] = 'fine';
+    // to check the index of the element 'you'
+    var index = arrays.indexOf('you');
+    // to add the emelent 'I' in the beginning of an array
+    arrays.unshift('I');
+    // to check if the value is array or not
+    console.log(Array.isArray(arrays));
+    // to check the length of an array
+    var arraylength = arrays.length;
+    arrays.forEach((items, index, array)=>{
+        console.log(items, index);
+    });
+    console.log(arrays.sort());
+    console.log(arrays.reverse());
+    console.log(arrays.toString());
+    console.log(arraylength);
+    console.log(index);
+    console.log(arrays);
 </script>

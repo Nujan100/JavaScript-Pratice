@@ -1,0 +1,68 @@
+<script src="task.js"></script>
+<p>Enter a number: <input type="number" id="selectednum"></p>
+<!-- <p>Add Element: <input type="number"></p> -->
+<button type="reset" onclick="add()"> Add Number</button>
+<!-- <p>Remove Index: <input type="number"></p> -->
+<button onclick="remove()" > Remove Index</button>
+<!-- <p>Search Element: <input type="number"></p> -->
+<button onclick="search()"> Search Element</button>
+<!-- <p>Update Index: <input type="number"></p> -->
+<button onclick="update()"> Update Index</button>
+<!-- <p>Delete Index: <input type="number"></p> -->
+<button onclick="delete1()"> Delete Index</button>
+<!-- <p>Display All: <input type="number"></p> -->
+<button onclick="display()"> Display All</button>
+<button onclick="clear1()"> Clear </button>
+<h2>Result:</h2>
+<h2 id="arr1">Empty</h2>
+<h2 id="inde"></h2>
+
+<script>
+    var num1= Number(selectednum.value);
+    var arr1= [];
+    var add = function(num1){
+        var num1= Number(selectednum.value);
+        arr1.push(num1);
+        console.log(arr1);
+        document.getElementById("arr1").innerHTML=arr1;
+    }
+    var remove = function(num1){
+        var num1= Number(selectednum.value);
+        arr1.splice(num1,1);
+        console.log(arr1);
+        document.getElementById("arr1").innerHTML=arr1;
+    }
+    var search = function(num1){
+        var num1= Number(selectednum.value);
+        var index = arr1.indexOf(num1);
+        console.log(index);
+        document.getElementById("inde").innerHTML=num1;
+    }
+    var update = function(num1){
+        var num1= Number(selectednum.value);
+        var index = arr1.indexOf(num1);
+        arr1[index] = num1;
+        console.log(arr1);
+        document.getElementById("arr1").innerHTML=arr1;
+    }
+    var delete1 = function(num1){
+        var num1= Number(selectednum.value);
+        var index = arr1.indexOf(num1);
+        arr1.splice(index,1);
+        console.log(arr1);
+        document.getElementById("arr1").innerHTML=arr1;
+    }
+    var display = function(num1){
+        var num1= Number(selectednum.value);
+        var index = arr1.indexOf(num1);
+        console.log(arr1);
+        document.getElementById("arr1").innerHTML=arr1;
+    }
+    var clear1 = function(num1){
+        var num1= Number(selectednum.value);
+        var len = arr1.length
+        arr1.splice(0,len);
+        console.log(arr1);
+        document.getElementById("arr1").innerHTML=arr1;
+    } 
+</script>
