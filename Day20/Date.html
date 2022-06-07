@@ -1,0 +1,53 @@
+<script>
+    // Date 
+    var dt = new Date(); // current date -> ex: Mon Jun 06 2022 18:27:42 GMT+0545 (Nepal Time)
+    console.log(dt);
+    
+    // Date.parse() -> number
+    var str1 = String("Mon Jun 06 2022 18:27:42 GMT+0545 (Nepal Time)");
+    var dt2 = Date.parse(str1);
+    console.log(dt2);
+    console.log(typeof dt2);
+    
+    // time stamp to date 
+    var dt3 = new Date(dt2);
+    console.log(dt3);
+    
+    // String to Date
+    var dt2 = Date.parse("2022-05-01");
+    console.log(dt2);
+
+    var dt2 = Date.parse("2022/05/01");
+    console.log(dt2);
+    // only works on yyyy-mm-dd
+    // or
+    // yyyy/mm/dd
+    console.log(new Date(dt2));
+
+    // Date Difference
+    var dt4 = new Date("2022-05-01");
+    var dt5 = new Date("2022-06-21");
+    var diff = dt5.getTime() - dt4.getTime();
+    var diffDays = diff / (1000 * 3600 * 24);
+    var diffTime = diff / (1000 * 3600);
+    console.log(diffTime);
+    console.log(diffDays);
+    console.log(diff);
+
+    var classStart = String("Mon Jun 06 2022 18:00:00 GMT+0545 (Nepal Time)");
+    var classEnd = new Date();
+    var diff = Date.parse(classEnd) - Date.parse(classStart);
+    var diffMin = diff / (1000 * 60);
+    var diffHours = diff / (1000 * 3600);
+    var diffDays = diff / (1000 * 3600 * 24);
+    console.log(diffMin);
+    console.log(diffHours);
+    console.log(diffDays);
+    
+    //! Exercise
+    // Date Conversion in Nepali to English Date
+    // Time Difference of difference region
+    
+    
+
+</script>

@@ -1,0 +1,71 @@
+<script src="array.js"></script>
+<script>
+    // Day 18
+    var arr3= new Array(3,5,6,7,8,9);
+    // for(let i=0;i<arr3.length;i++){
+    //     console.log(arr3[i]);
+    // }
+
+    // for(let index in arr3){
+    //     console.log(arr3[index]);
+    // }
+
+    // // for off loop
+    // for(let item of arr3){
+    //     console.log(item);
+    // }
+
+    // for each function
+    arr3.forEach(function(element){
+        console.log(element);
+    });
+    
+    // for each function arrow function
+    arr3.forEach((number, index)=>{
+        console.log('Index: ' + index +'Value:' + number);
+    });
+
+    // Array.at() returns elements
+    console.log(arr3.at(1));
+    console.log(arr3[1]);
+    
+    // Array.concat() returns Array
+    var arr4= arr3.concat(4);
+    console.log(arr4);
+
+    // Array.entries() returns Array
+    var arr3= new Array(4,10,23,88,10);
+    var arr4= arr3.entries();
+    console.log(arr4);
+    for (let index in arr4){
+        console.log(arr4[index]);
+    }
+    for (let item of arr4){
+        console.log(item);
+    }
+    
+    // Array.every() returns boolean
+    var arr3= new Array(4,10,23,88,12);
+    var grade= (currentValue)=> currentValue < 40;
+    console.log(arr3.every(grade));
+    
+    // Array.fill()
+    arr3= arr3.fill(6,2,4);
+    console.log(arr3);
+
+    // Array.filter() returns Array
+    var var3 = [1,2,3,4,5,6,7,8,9,10];
+    var var3 = var3.filter(item => item > 6);
+    console.log(var3);
+
+    // Array.find() returns value
+    var var3 = [1,2,3,4,5,6,7,8,9,99,45,10];
+    console.log(var3.find(e => e % 99 == 0));
+
+    // Array.flat()
+    var var3 = [1,2,3,4,5,6,[7,8,9,10]];
+    var var3 = var3.flat();
+    console.log(var3);
+    
+
+</script>

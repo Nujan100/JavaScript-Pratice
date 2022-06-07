@@ -36,7 +36,7 @@
         var num1= Number(selectednum.value);
         var index = arr1.indexOf(num1);
         console.log(index);
-        document.getElementById("inde").innerHTML=num1;
+        document.getElementById("inde").innerHTML=index;
     }
     var update = function(num1){
         var num1= Number(selectednum.value);
@@ -48,7 +48,7 @@
     var delete1 = function(num1){
         var num1= Number(selectednum.value);
         var index = arr1.indexOf(num1);
-        arr1.splice(index,1);
+        arr1.splice(num1,1);
         console.log(arr1);
         document.getElementById("arr1").innerHTML=arr1;
     }
