@@ -1,0 +1,49 @@
+<script>
+    
+    // Math.PI is a static property 
+    //  Math.Abs is a static method
+    //  String() is a instance property
+    //  String.at() is a instance method
+    
+    var map1 = new Map();
+    // Constructor
+    // Map()
+    map1.set('id', 2);
+    map1.set('name', 'John');
+    map1.set('Address', '123 Main St');
+    console.log(map1);
+    map1.set('id', 10);
+    console.log(map1);
+    
+    // Map.get( key )
+    console.log(map1.get('id'));
+    console.log(map1.get('name'));
+    console.log(map1.get('Address'));
+    // Map.clera()
+    /*
+    map1.clear();
+    console.log(map1);
+    // Map.delete( key )
+    map1.delete('id');
+    console.log(map1);
+    */
+    // Map.has( key )
+    console.log(map1.has('id'));
+    // Map.keys()
+    console.log(map1.keys());
+    var keys = map1.keys();
+    var values = map1.values();
+    // for each 
+
+    // for (let i= 0; i < keys.length; i++) {
+    //     console.log(map1.get(keys[i]));
+    // }
+
+    for (let i= 0; i < values.length; i++) {
+        console.log(values[i]);
+    }
+    // Map.values()
+    // console.log(map1.values());
+    
+    
+</script>
