@@ -1,0 +1,73 @@
+<h1> Personal Form </h1>
+<p> ID: <input type="text" id="txtId"></p>
+<p> Name: <input type="text" id="txtName"></p>
+<p> Address: <input type="text" id="txtAddress"></p>
+<p> Phone: <input type="text" id="txtphone"></p>
+<p> Email: <input type="text" id="txtemail"></p>
+<p> <input type="button" value="CHECK" onclick="process()"> </p>
+
+<script>
+    
+    // var process = function () {
+    //     // validate from using regular expression
+    //     var str1 = txtId.value;
+    //     var regexp = /[0-9]/;
+    //     var str2 = "";
+    //     var str3 = "";
+    //     var result1 = false;
+    //     var result2 = regexp.test(str1);
+    //     if (result2 == true) {
+    //         str2 = str2 + "<br/>ID: " + txtId.value;
+    //         result1 = true;
+    //     }
+    //     else {
+    //         str3 = str3 + "Error :" + txtId.value;
+    //     }
+    //     if (result1 == true) {
+    //         document.write(str2);
+    //     }
+    //     else {
+    //         document.write(str3);
+    //     }
+    //     // Name
+    //     var str4 = txtName.value;
+    //     var regexps = /^[a-zA-Z] + [a-zA-Z]+ $/;
+    //     var str5 = "";
+    //     var str6 = "";
+    //     var result2 = false;
+    //     var result3 = regexps.test(str1);
+    //     if (result3 == true) {
+    //         str5 = str5 + "<br/>Name: " + txtName.value;
+    //         result3 = true;
+    //     }
+    //     else {
+    //         str6 = str6 + "Error :" + txtName.value;
+    //     }
+    //     if (result3 == true) {
+    //         document.write(str5);
+    //     }
+    //     else {
+    //         document.write(str6);
+    //     }
+    // }
+    
+   
+    var process = function(){
+        var str1 = txtId.value;
+        var str2 = txtName.value;
+        var str3 = txtAddress.value;
+        var str4 = txtphone.value;
+        var str5 = txtemail.value;
+        var regexp1 = /[0-9]/;
+        var regexp2 = /[a-zA-Z]+[a-zA-Z]/;
+        var regexp3 = /[a-zA-Z]/;
+        var regexp4 = /[0-9]/;
+        var regexp5 = /[a-zA-Z]+[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]+/;
+        if (regexp1.test(str1) == true && regexp2.test(str2) == true && regexp3.test(str3) == true && regexp1.test(str4) == true && regexp2.test(str5) == true) {
+            document.write("<br/>ID: " + str1 + "<br/>Name: " + str2 + "<br/>Address: " + str3 + "<br/>Phone: " + str4 + "<br/>Email: " + str5);
+        }
+        else {
+            document.write("Error");
+        }
+    }
+</script>

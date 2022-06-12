@@ -8,4 +8,29 @@
     console.log(result);    
 
     //validate name address email phone id DateTime
+    // validate name
+    var str2 = 'John123';
+    const regex2 = /^[a-zA-Z]+$/;
+    var result2 = regex2.test(str2);
+    console.log(result2);
+    // validate address
+    var str3 = '123 Maharagaung Nepal';
+    const regex3 = /^[0-9]+\s[a-zA-Z]+\s[a-zA-Z]+$/;
+    var result3 = regex3.test(str3);
+    console.log(result3);
+    // validate email
+    var str4 = 'example@gmail.com';
+    const regex4 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var result4 = regex4.test(str4);
+    console.log(result4);
+    // validate phone
+    var str5 = '123-456-7890';
+    const regex5 = /^\d{3}-\d{3}-\d{4}$/;
+    var result5 = regex5.test(str5);
+    console.log(result5);
+    // validate DateTime
+    var str6 = '2020-01-01';
+    const regex6 = /^\d{4}-\d{2}-\d{2}$/;
+    var result6 = regex6.test(str6);
+    console.log(result6);
 </script>
