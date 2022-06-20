@@ -1,49 +1,38 @@
 <script src="pratice.js">
 </script>
 
-<h2>MarkSheet</h2>
-<p>SID: <input type="text" id="txtSid"></p>
-<p>Subject 1: <input type="text" id="txtSub1"></p>
-<p>Subject 2: <input type="text" id="txtSub2"></p>
-<p>Subject 3: <input type="text" id="txtSub3"></p>
-<p><input type="button" value="PROCESS" name="btnProcess" onclick="processStudent1()"></p>
-<p>Total: <input type="text" id="txtTotal"></p>
-<p>Average: <input type="text" id="txtAverage"></p>
-<p>Result: <input type="text" id="txtResult"></p>
-<p> <input type="button" value="SAVE" name="btnSave" onclick="processStudent1()"></p>
-<!-- we call function to execute-->
-<table border="1" class="table1">
-    <tr>
-        <td>ID</td>
-        <td>SUB1</td>
-        <td>SUB2</td>
-        <td>SUB3</td>
-        <td>TOTAL</td>
-        <td>AVERAGE</td>
-        <td>RESULT</td>
-    </tr>
-    <tr>
-        <td>ID</td>
-        <td>SUB1</td>
-        <td>SUB2</td>
-        <td>SUB3</td>
-        <td>TOTAL</td>
-        <td>AVERAGE</td>
-        <td>RESULT</td>
-    </tr>
-</table>
-
+<!-- <!-- appendChild() - 1  -->
+<!-- <h2>Our courses</h2>
+<ul id="courses">
+    <li>C</li>
+    <li>C++</li>
+</ul>
+<button onclick="f1()">Click Me</button>
 <script>
-    function processStudent1(sub1, sub2, sub3) {
-        var sid = sub1 = sub2 = sub3 = null;
-        sid = txtSid.value;
-        sub1 = txtSub1.value;
-        sub2 = txtSub2.value;
-        sub3 = txtSub3.value;
-        var result = process1(sub1, sub2, sub3);
-        txtTotal.value = result.total;
-        txtAverage.value = result.avg;
-        txtResult.value = result.result;
-        console.log(result);
+    function f1() {
+        var item = "li"; //tag
+        var node = document.createElement(item);
+        var textnode = document.createTextNode("Java");
+        node.appendChild(textnode);
+        document.getElementById("courses").appendChild(node);
+        // to create for loop using getElementsById()
+        // to stop data duplication
     }
+</script> -->
+
+<h2>Our courses</h2>
+<ul id="courses">
+    <li>C</li>
+    <li>C++</li>
+</ul>
+<button id="btn1">Add More Button</button>
+<script>
+    var btn1 = document.getElementById("btn1");
+    btn1.addEventListener("click", function () {
+        var item = "li";
+        var node = document.createElement(item);
+        var textnode = document.createTextNode("Java");
+        node.appendChild(textnode);
+        document.getElementById("courses").appendChild(node);
+    });
 </script>

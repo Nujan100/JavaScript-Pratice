@@ -1,0 +1,37 @@
+<script>
+// calling rest api using try catch
+try{
+    var request = new XMLHttpRequest();
+    request.open("GET", "https://restcountries.com/v3.1/all");
+    request.send();
+    request.addEventListener("load", function(){
+        console.log(this.responseText);
+        // document.write(this.responseText);
+        let obj = JSON.parse(this.responseText);
+        console.log(obj);
+        document.write(obj[0].name.common + obj[0].name.official);
+    });
+    // var data = JSON.parse(xhr.responseText);
+    // document.write(data);
+}
+catch(err){
+    document.write(err);
+    console.log(err);
+}
+
+// function getData() {
+//     try {
+//         var request = new XMLHttpRequest();
+//         request.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+//         request.onload = function () {
+//             if (this.status == 200) {
+//                 var data = JSON.parse(this.response);
+//                 document.getElementById('data').innerHTML = data.title;
+//             }
+//         };
+//         xhr.send();
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
+</script>
